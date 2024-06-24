@@ -1,0 +1,30 @@
+/*
+azul escuro = 255787
+azul claro = 57C4F2
+*/
+body{
+    background-color: #255787;
+}
+.container__page{
+    background-color: #255787;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.container__login{
+    background-color: whitesmoke;
+    width: 300px;
+    height: 400px;
+    border: solid;
+    border-color: gray;
+    border-radius: 2%;
+    
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.container__login img{
+    width: 20%;
+}
