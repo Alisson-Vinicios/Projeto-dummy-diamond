@@ -12,14 +12,14 @@ btnLogar.addEventListener('click', () => {
   coletaDados();
 })
 
-let enviarDados = function(usuario){
+let enviarDados = function(buscaUsuario){
   fetch('https://dummyjson.com/user/login', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       
-      username: usuario.user,
-      password: usuario.senha,
+      username: buscaUsuario.user,
+      password: buscaUsuario.senha,
       expiresInMins: 30, // optional, defaults to 60
     })
   })
