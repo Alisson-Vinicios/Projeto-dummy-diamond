@@ -1,11 +1,28 @@
 const btnLogar = document.querySelector('#buttonLogin');
-const userLogin = document.querySelector('#userLogin');
-const userSenha = document.querySelector('#userSenha');
 
 let coletaDados = function() {
   let usuario = {
     user : document.querySelector('#userLogin').value,
     senha : document.querySelector('#userSenha').value
   }
-  return usuario
+  enviarDados(usuario)
+}
+
+btnLogar.addEventListener('click', () => {
+  coletaDados();
+})
+
+let enviarDados = function(usuario){
+  fetch('https://dummyjson.com/user/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      
+      username: usuario.user,
+      password: usuario.senha,
+      expiresInMins: 30, // optional, defaults to 60
+    })
+  })
+  .then(res => res.json())
+  .then(console.log);
 }
