@@ -5,7 +5,7 @@ let coletaDados = function() {
     user : document.querySelector('#userLogin').value,
     senha : document.querySelector('#userSenha').value
   }
-  enviarDados(usuario)
+  let obj = enviarDados(usuario)
 }
 
 btnLogar.addEventListener('click', () => {
@@ -24,5 +24,5 @@ let enviarDados = function(buscaUsuario){
     })
   })
   .then(res => res.json())
-  .then(console.log);
+  .then(select);
 }
