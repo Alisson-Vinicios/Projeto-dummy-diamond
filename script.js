@@ -1,5 +1,5 @@
 const btnLogar = document.querySelector('#buttonLogin');
-
+const btnVoltar = document.querySelector('#voltar');
 let coletaDados = async function() {
   let usuario = {
     user : document.querySelector('#userLogin').value,
@@ -10,7 +10,16 @@ let coletaDados = async function() {
     alert('As credenciais não estão registradas')
   }
   else{
-    console.log(resposta);
+    document.querySelector('.container__login').style.display = "none";
+    document.querySelector('.container__resultado').style.display = "flex";
+    const x = document.getElementById('imgPessoa').src = resposta.image;
+    console.log(resposta)
+    document.getElementById('id').textContent += resposta.id;
+    document.getElementById('userNameResult').textContent += resposta.username;
+    document.getElementById('name').textContent += resposta.firstName;
+    document.getElementById('sobrenome').textContent += resposta.lastName;
+    document.getElementById('sexo').textContent += resposta.gender;
+    document.getElementById('email').textContent += resposta.email;
   }
   
 }

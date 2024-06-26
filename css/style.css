@@ -56,3 +56,34 @@ body{
     padding-bottom: 30px;
     width: 40%;
 }
+
+.container__resultado{
+    display: none;
+    background-color: whitesmoke;
+    width: 450px;
+    height: 750px;
+    border: solid;
+    border-color: gray;
+    border-radius: 2%;
+    
+    flex-direction: column;
+    text-align: center;
+}
+
+.container__resultado h3{
+    padding-top: 20px;
+    width: 100%;
+}
+
+.container__resultado img{
+    margin: 10px;
+    border: solid;
+    border-style: dashed;
+    border-color: gray;
+}
+
+.container__resultado p{
+    padding: 15px;
+    display: flex;
+    justify-content: left;
+}
