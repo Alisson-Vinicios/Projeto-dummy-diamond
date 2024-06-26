@@ -24,5 +24,5 @@ let enviarDados = function(buscaUsuario){
     })
   })
   .then(res => res.json())
-  .then(select);
+  .then(console.log);
 }
