@@ -87,3 +87,16 @@ body{
     display: flex;
     justify-content: left;
 }
+.container__resultado a{
+    text-decoration: none;
+    color: white;
+}
+
+.container__resultado #voltar{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 5px 30px;
+    background-color: #be0000;
+    border-radius: 10%;
+    border-color: white;
+}
