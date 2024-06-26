@@ -6,7 +6,13 @@ let coletaDados = async function() {
     senha : document.querySelector('#userSenha').value
   }
   const resposta = await enviarDados(usuario);
-  console.log(resposta);
+  if(resposta.message === 'Invalid credentials'){
+    alert('As credenciais não estão registradas')
+  }
+  else{
+    console.log(resposta);
+  }
+  
 }
 
 btnLogar.addEventListener('click', () => {
